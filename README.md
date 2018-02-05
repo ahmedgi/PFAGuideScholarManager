@@ -1,33 +1,34 @@
-# PFAGuideScholarManager
-Ce repository contient le projet du site web d'un guide d'install pour l'application Scholar Manager ...
+la conception de la base de données , 
 
-Si vous voulez envoyer vos modifications, il faut suivre ces étapes :
+Table product :
+•	id  (int(10) unsigned Incrément automatique)
+•	name(varchar(128))
+•	qauntite(int(10))
+•	price (decimal(20,6))
+Table carts
+•	id	int(10) unsigned Incrément automatique	
+•	product_id( int(10))
+•	session_id( varchar(128))
+Table orders
+•	id (int(10) unsigned Incrément automatique)
+•	reference(varchar(9) NULL)
+•	cart_id	(int(10) unsigned)	
 
-.Premierement, faite fork du repository pour que vous obtiendrez une copie sur votre compte.
+* Arborescence du projet.
+    script
+        script.js
+    style
+        style.css
+    classes
+        Cart.php
+        Product.php
+        Order.php
+        DB.php
+    images
+        logo.jpg
+    config   : la configuration de la base de données
+        config.php
+    index.php
+    back.php
+    README.md
 
-	.Ensuite vous lancez les commandes sur votre console git :
-
-        .Vous clonez le projet dans votre espace de travail:
-
-          via ssh :
-
-          git clone git@github.com:zakariarhb/PFAGuideScholarManager.git
-
-          via https :
-
-          git clone https://github.com/zakariarhb/PFAGuideScholarManager.git
-
-        .Vous créez une branche :
-
-          git checkout -b <votreBranche>
-
-        .Fesez vos modif. et vos commits et ensuite tapez:
-
-          git checkout master
-
-          git push origin <votreBranche>
-
-	.Recharger la page de votre compte github.
-		Avant de cliquer sur le bouton Pull Request, soyez sûr que vous êtes sur la branche crée tout à l'heure pas sur le master.
-
-	.Cliquez sur pull Request. Rédigez un message qui contient des explications sur les modif.
